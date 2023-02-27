@@ -1,0 +1,17 @@
+<br class="p-50 m-50" />
+
+<utils-textbox
+  style="margin-left: 10px"
+  [(ngModel)]="playerName"
+  [clearButton]="true"
+></utils-textbox>
+
+<button mat-button (click)="createClient()">
+  <i class="fa-solid fa-gamepad">Play</i>
+</button>
+
+<!-- <ul class="list-group list-group-flush" *ngFor="let message of chatmessages">
+  <li class="list-group-item">
+    {{ message.sent }}: {{ message.message }}
+  </li>
+</ul> -->

@@ -1,0 +1,39 @@
+<!-- <form class="form-inline" [formGroup]="form">
+
+  <div class="form-group mx-sm-6">
+    <input
+      type="text"
+      class="form-control mb-2"
+      placeholder="User"
+      formControlName="usermessage"
+    />
+  </div>
+  <div class="form-group mx-sm-6">
+    <input
+      type="text"
+      class="form-control mb-2"
+      placeholder="Type message"
+      formControlName="chatmessage"
+    />
+  </div>
+  <button
+    (click)="sendMessage()"
+    [disabled]="form.invalid || !connectionEstablished"
+    class="btn btn-primary mb-2"
+  >
+    Send
+  </button>
+
+  <button class="btn btn-primary mb-2" (click)="sendControls('up')">
+    Up
+  </button>
+  <button class="btn btn-primary mb-2" (click)="sendControls('down')">
+    Down
+  </button>
+</form>
+
+<ul class="list-group list-group-flush" *ngFor="let message of chatmessages">
+  <li class="list-group-item">
+    {{ message.sent }}: {{ message.message }}
+  </li>
+</ul> -->

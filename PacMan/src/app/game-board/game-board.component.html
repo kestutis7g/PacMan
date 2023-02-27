@@ -1,0 +1,73 @@
+<body style="background-color: rgb(34, 34, 34)">
+  <div class="container">
+    <div class="score-card">
+      <div class="score-board">
+        <h1>Score</h1>
+        <h3>{{ player?.currentScore }}</h3>
+        <h1>Health</h1>
+        <h3>{{ pickupHeals?.currentHealth }}</h3>
+      </div>
+
+      <div style="z-index: 999">
+        <div class="restart-button" (click)="restart()">RESTART</div>
+        <br />
+        <div class="restart-button" (click)="quit()">QUIT</div>
+        <br />
+        <div
+          class="restart-button"
+          *ngIf="this.ORIGINATOR.state == 'Play'"
+          (click)="pause()"
+        >
+          PAUSE
+        </div>
+        <div
+          class="restart-button"
+          *ngIf="this.ORIGINATOR.state == 'Pause'"
+          (click)="play()"
+        >
+          Play
+        </div>
+        <br />
+        <div class="restart-button" (click)="toggleTerminal()">TERMINAL</div>
+      </div>
+    </div>
+
+    <div class="game-board"></div>
+    <div *ngIf="!terminalActive" class="terminal-window"></div>
+    <div *ngIf="terminalActive" class="terminal-window">
+      <div class="terminal-messages">
+        <ul
+          *ngFor="let message of chatmessages"
+          style="padding: 0px 10px; margin: 0"
+        >
+          <li class="list-group-item" style="color: #ddd">
+            {{ message.message }}
+          </li>
+        </ul>
+      </div>
+      <mat-form-field appearance="legacy" class="terminal">
+        <input
+          class="terminal-input"
+          matInput
+          placeholder=" "
+          autocomplete="off"
+          [(ngModel)]="command"
+          (keydown.enter)="executeCommand()"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="game-over" *ngIf="gameOver">
+      <h1>Game Over</h1>
+    </div>
+
+    <div class="mobile-controls">
+      <nav class="o-pad">
+        <a class="up" (click)="dpadMovement('ArrowUp')"></a>
+        <a class="right" (click)="dpadMovement('ArrowRight')"></a>
+        <a class="down" (click)="dpadMovement('ArrowDown')"></a>
+        <a class="left" (click)="dpadMovement('ArrowLeft')"></a>
+      </nav>
+    </div>
+  </div>
+</body>

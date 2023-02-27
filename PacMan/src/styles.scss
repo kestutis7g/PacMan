@@ -1,0 +1,81 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #ffffff;
+  --board-color: #b5b5b5;
+  --player-color: #fed049;
+  --opponent-color: #2110d8;
+  --food-color: #e70f0f;
+  --clumsyfood-color: #09ff00;
+  --heal-color: #860202;
+  --powerups-color: #4d0334;
+  --antidotefood-color: #1100ff;
+  --wall-color: #1a1a1a;
+  --button-color: #000000;
+  --dpad-radius: 17%;
+  --dpad-radius-in: 20%;
+  --dpad-fg: #ddd;
+  --dpad-fg-hover: #eee;
+  --dpad-bg: #fff;
+  --arrowcolor: #aaa;
+  --tri-sml-a: 13px;
+  --tri-sml-b: 19px;
+  --tri-lrg-a: 13px;
+  --tri-lrg-b: 19px;
+  --dpad-arrow-shift: 5px;
+  --dpad-arrow-move: 35%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: var(--background-color);
+  font-family: "Anton", sans-serif;
+}
+
+.player {
+  background-color: var(--player-color);
+  border: 0.25vmin solid black;
+  transition: all 0.3ms ease-in;
+}
+
+.opponent {
+  background-color: var(--opponent-color);
+  border: 0.25vmin solid black;
+  transition: all 0.3ms ease-in;
+}
+
+.wall {
+  background-color: var(--wall-color);
+  transition: all 0.3ms ease-in;
+}
+
+.food {
+  border-radius: 50%;
+  background-color: var(--food-color);
+  border: 0.5vmin solid black;
+  transition: all 0.3ms ease-in;
+}
+.powerups {
+  background-color: var(--powerup-color);
+  transition: all 0.3ms ease-in;
+}
+.clumsyfood {
+  border-radius: 50%;
+  background-color: var(--clumsyfood-color);
+  border: 0.5vmin solid black;
+  transition: all 0.3ms ease-in;
+}
+.antidotefood {
+  border-radius: 50%;
+  background-color: var(--antidotefood-color);
+  border: 0.5vmin solid black;
+  transition: all 0.3ms ease-in;
+}
