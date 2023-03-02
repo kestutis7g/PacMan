@@ -1,17 +1,22 @@
 ## Install
 
-Just clone this repo and run
-
+Clone this repo and run
 ```javascript
 npm install
 ```
 in the `\PacMan` folder.
 
+Open CMD and run
+```javascript
+ipconfig
+```
+Copy your IPv4 address and replace all IP addresses in the project
+
 
 ## Usage
 
 ```javascript
-ng serve
+ng serve --host 0.0.0.0
 ```
 in the `\PacMan` folder.
 
